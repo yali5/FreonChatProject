@@ -1,0 +1,73 @@
+.container {
+  background-color: var(--base-800);
+  color: var(--base-100);
+  padding: 1.5rem 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8rem; /* Tesco-style overall text size */
+}
+
+.footerColumns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, auto)); /* two tighter columns */
+  justify-content: start;     /* keeps everything left-aligned */
+  gap: 2rem;                  /* good spacing between Contact and Links */
+  padding-left: 1rem;         /* pull content close to the left edge */
+  padding-right: 1rem;
+}
+
+.footerSection h4 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.5rem;
+  color: var(--yellow);
+  opacity: 0.7;
+}
+
+.footerSection p {
+  font-size: 0.8rem;
+  opacity: 0.75;
+  line-height: 1.4;
+  margin: 0.3rem 0;
+}
+
+.footerSection nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.footerSection a {
+  font-size: 0.8rem;
+  opacity: 0.75;
+  color: var(--base-100);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footerSection a:hover {
+  opacity: 1;
+  color: var(--yellow);
+}
+
+.footerBottom {
+  text-align: center;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .footerColumns {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footerSection h4 {
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+  }
+}
